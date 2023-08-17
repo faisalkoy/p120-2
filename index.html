@@ -1,0 +1,288 @@
+<html>
+<head>
+  <title>Real Time Image Identification App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+  <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+
+<body>
+
+<center>
+
+<div class="container">
+  <h3>
+  <span>Case study between google lens and Mobilenet</span>
+  
+  <br>
+  <br>
+  <p class="btn btn-primary">
+  GOOGLE lens
+</p>
+  <p><b style="color:red;" >
+    VS</b></p>
+    <br>
+    <p class="btn btn-primary">Mobilenet</p>
+    </h3>
+    <hr>
+<ol>
+  
+  <div class="test_image_and_result col-xs-12">
+    <li class="col-sm-4 col-xs-12">
+      <b>water bottle - </b>
+      <img src="water bottle.jpeg" class="img-responsive">
+    </li>
+<h5 class="col-sm-4 col-xs-12">
+  output on<b> GOOGLE LENS</b> -
+  <i>Stainless steel water bottle</i>
+</h5>
+<h5 class="col-sm-4 col-xs-12">
+  output on <b>Mobilenet Model</b> -
+  <i>water bottle</i> 
+  <span> </span>
+</h5>
+<div class="mini_result col-xs-12">
+  <h4>Result -</h4>
+  <h4>GOOGLE LENS is more accurate</h4>
+  <hr>
+  
+  </div>
+</div>
+
+<div class="test_image_and_result col-xs-12">
+  <li class="col-sm-4 col-xs-12">
+    <b>marker - </b>
+    <img src="marker.jpeg" class="img-responsive">
+  </li>
+<h5 class="col-sm-4 col-xs-12">
+output on<b> GOOGLE LENS</b> -
+<i>highliter</i>
+</h5>
+<h5 class="col-sm-4 col-xs-12">
+output on <b>Mobilenet Model</b> -
+<i>plastic marker</i> 
+<span> </span>
+</h5>
+<div class="mini_result col-xs-12">
+<h4>Result -</h4>
+<h4>Mobilenet model is more accurate </h4>
+<hr>
+
+</div>
+</div>
+
+<div class="test_image_and_result col-xs-12">
+  <li class="col-sm-4 col-xs-12">
+    <b>Glasses - </b>
+    <img src="glasses.jpeg" class="img-responsive">
+  </li>
+<h5 class="col-sm-4 col-xs-12">
+output on<b> GOOGLE LENS</b> -
+<i>Eye glasses</i>
+</h5>
+<h5 class="col-sm-4 col-xs-12">
+output on <b>Mobilenet Model</b> -
+<i>Eye glasses</i> 
+<span> </span>
+</h5>
+<div class="mini_result col-xs-12">
+<h4>Result -</h4>
+<h4>draw</h4>
+<hr>
+
+</div>
+</div>
+
+<div class="test_image_and_result col-xs-12">
+  <li class="col-sm-4 col-xs-12">
+    <b>glue - </b>
+    <img src="glue.jpeg" class="img-responsive">
+  </li>
+<h5 class="col-sm-4 col-xs-12">
+output on<b> GOOGLE LENS</b> -
+<i>Glue </i>
+</h5>
+<h5 class="col-sm-4 col-xs-12">
+output on <b>Mobilenet Model</b> -
+<i>glue</i> 
+<span> </span>
+</h5>
+<div class="mini_result col-xs-12">
+<h4>Result -</h4>
+<h4>draw</h4>
+<hr>
+
+</div>
+</div>
+
+<div class="test_image_and_result col-xs-12">
+  <li class="col-sm-4 col-xs-12">
+    <b>smartphone - </b>
+    <img src="smartphone.jpeg" class="img-responsive">
+  </li>
+<h5 class="col-sm-4 col-xs-12">
+output on<b> GOOGLE LENS</b> -
+<i>iphone</i>
+</h5>
+<h5 class="col-sm-4 col-xs-12">
+output on <b>Mobilenet Model</b> -
+<i>smart phone</i> 
+<span> </span>
+</h5>
+<div class="mini_result col-xs-12">
+<h4>Result -</h4>
+<h4>draw</h4>
+<hr>
+
+</div>
+</div>
+
+
+
+
+<div class="test_image_and_result col-xs-12">
+  <li class="col-sm-4 col-xs-12">
+    <b>backpack - </b>
+    <img src="backpack.jpeg" class="img-responsive">
+  </li>
+<h5 class="col-sm-4 col-xs-12">
+output on<b> GOOGLE LENS </b> -
+<i>easpak backpack</i>
+</h5>
+<h5 class="col-sm-4 col-xs-12">
+output on <b>Mobilenet Model</b> -
+<i></i> 
+<span>school bag </span>
+</h5>
+<div class="mini_result col-xs-12">
+<h4>Result -</h4>
+<h4>google lens is more accurate</h4>
+<hr>
+
+</div>
+</div>
+
+
+<div class="test_image_and_result col-xs-12">
+  <li class="col-sm-4 col-xs-12">
+    <b>sharpner - </b>
+    <img src="sharpner.jpeg" class="img-responsive">
+  </li>
+<h5 class="col-sm-4 col-xs-12">
+output on<b> GOOGLE LENS </b> -
+<i>school sharpner</i>
+</h5>
+<h5 class="col-sm-4 col-xs-12">
+output on <b>Mobilenet Model</b> -
+<i>sharpner</i> 
+<span> </span>
+</h5>
+<div class="mini_result col-xs-12">
+<h4>Result -</h4>
+<h4>draw</h4>
+<hr>
+
+</div>
+</div>
+
+<div class="test_image_and_result col-xs-12">
+  <li class="col-sm-4 col-xs-12">
+    <b>mouse - </b>
+    <img src="mouse.jpeg" class="img-responsive">
+  </li>
+<h5 class="col-sm-4 col-xs-12">
+output on<b> GOOGLE LENS </b> -
+<i>computer mouse</i>
+</h5>
+<h5 class="col-sm-4 col-xs-12">
+output on <b>Mobilenet Model</b> -
+<i>mouse</i> 
+<span> </span>
+</h5>
+<div class="mini_result col-xs-12">
+<h4>Result -</h4>
+<h4>google lens is more accurate</h4>
+<hr>
+
+</div>
+</div>
+
+<div class="test_image_and_result col-xs-12">
+  <li class="col-sm-4 col-xs-12">
+    <b>pencil case - </b>
+    <img src="pencil_case.jpeg" class="img-responsive">
+  </li>
+<h5 class="col-sm-4 col-xs-12">
+output on<b> GOOGLE LENS </b> -
+<i>school case</i>
+</h5>
+<h5 class="col-sm-4 col-xs-12">
+output on <b>Mobilenet Model</b> -
+<i>pencil case</i> 
+<span> </span>
+</h5>
+<div class="mini_result col-xs-12">
+<h4>Result -</h4>
+<h4>mobile net is more accurate</h4>
+<hr>
+
+</div>
+</div>
+
+<div class="test_image_and_result col-xs-12">
+  <li class="col-sm-4 col-xs-12">
+    <b>dice cubes - </b>
+    <img src="dice_cubes.jpeg" class="img-responsive">
+  </li>
+<h5 class="col-sm-4 col-xs-12">
+output on<b> GOOGLE LENS </b> -
+<i>dice</i>
+</h5>
+<h5 class="col-sm-4 col-xs-12">
+output on <b>Mobilenet Model</b> -
+<i>dice cubes</i> 
+<span> </span>
+</h5>
+<div class="mini_result col-xs-12">
+<h4>Result -</h4>
+<h4>mobile net is more accurate</h4>
+<hr>
+
+</div>
+</div>
+
+
+<h4> so according to my case study its a draw between the mobile net and google lens with ecah of them getting 3 correct including 4 draws</h4>
+
+
+
+    
+    
+    
+
+    
+    
+
+    
+  </div>
+  <br>
+</ol>
+</div>
+</center>
+<div class="copy_right_footer">
+Developed by - Faisal
+</div>
+
+<script src="main.js"></script>
+</body>
+
+</html>
+
+
